@@ -9,7 +9,7 @@ class Gpa
 {
     public static void main(String[] args)
     {
-       final Scanner sc = new Scanner(System.in);
+        final Scanner sc = new Scanner(System.in);
         final Logger print = Logger.getLogger("Gpa");
         print.info("Enter your name:");
         String name=sc.nextLine();
