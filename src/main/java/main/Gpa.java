@@ -3,6 +3,7 @@ package main;
 import calculation.*;
 import update.Update;
 import java.util.*;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 class Gpa
@@ -16,7 +17,7 @@ class Gpa
         print.info("Enter your grade:");
         String grade=sc.nextLine();
         Calculation cal=new Calculation(name);
-        print.info(cal.calculating(grade));
+        print.log(Level.INFO, () -> (cal.calculating(grade)));
        Update updategpa= new Update();
         updategpa.updating();
     }

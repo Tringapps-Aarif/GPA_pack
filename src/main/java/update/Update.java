@@ -2,6 +2,7 @@ package update;
 
 import calculation.Calculation;
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Update {
@@ -17,10 +18,10 @@ public class Update {
         if(ch==1)
         {
 
-        System.out.print("Enter your new grade: ");
+            print.info("Enter your new grade: ");
         String newgrade=sc.next();
         Calculation cal=new Calculation(newgrade);
-        print.info(cal.calculating(newgrade));
+            print.log(Level.INFO, () -> (cal.calculating(newgrade)));
         }
         else{
         System.exit(0);
